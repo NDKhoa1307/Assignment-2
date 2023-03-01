@@ -1,3 +1,9 @@
+#
+#   Progress test 2
+#   Done 3/1/2023
+#   By Nguyen Dang Khoa -  DE180891
+#
+
 def number_of_lines(text: tuple) -> str:
     count_line = 0
     for _ in text:
@@ -57,13 +63,18 @@ def main():
     print()
 
     #Q4
+    #Reading and then modifying the content of the file
     text = open(file_name, 'r')
     print("The output after changing is:")
     after_change = read_then_change(text.read())
     print(after_change)
     text.close()
+
+    #Updating the content of the file
     text = open(file_name, 'w')
     text.writelines(after_change)
 
+
+#Main program
 if __name__ == '__main__':
     main()
