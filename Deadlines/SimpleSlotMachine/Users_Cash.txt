@@ -1,0 +1,2 @@
+Date        Time        Ended the game with
+2023-02-15	11:37:23	10.00$
