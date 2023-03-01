@@ -20,6 +20,15 @@ def count_occurence(text: tuple):
     for keys in occurence:
         print(f'{keys}: {occurence[keys]}')
 
+def read_then_change(text: str) -> str:
+    res = ""
+    for x in text.split():
+        if x == "ran":
+            x = "run"
+        res += (x + " ")
+
+    return res
+
 def main():
     #Read the file using the file name entered from the keyboard
     file_name = input("Please enter the file name:").strip()
@@ -46,6 +55,15 @@ def main():
     print("The occurence of all words are:")
     count_occurence(text)
     print()
+
+    #Q4
+    text = open(file_name, 'r')
+    print("The output after changing is:")
+    after_change = read_then_change(text.read())
+    print(after_change)
+    text.close()
+    text = open(file_name, 'w')
+    text.writelines(after_change)
 
 if __name__ == '__main__':
     main()
