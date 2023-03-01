@@ -7,5 +7,4 @@ while True:
         file_input = input("Cannot find file, please re-enter file:").strip()
         continue
 
-for line in the_file:
-    print(line)
+print(the_file.read())
