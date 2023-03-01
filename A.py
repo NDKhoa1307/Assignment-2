@@ -6,9 +6,19 @@ def number_of_lines(text: tuple) -> str:
     return (f"The number of lines are: {count_line}")
 
 def print_words_less_than(text: tuple, characters: int):
-    for x in text.read().split():
-        if len(x) >= characters:
-            print(x, end = " ")
+    for word in text.read().split():
+        if len(word) >= characters:
+            print(word, end = ", ")
+
+    print()
+
+def count_occurence(text: tuple):
+    occurence = {}
+    for word in text.read().split():
+        occurence[word] = occurence.get(word, 0) + 1
+
+    for keys in occurence:
+        print(f'{keys}: {occurence[keys]}')
 
 def main():
     #Read the file using the file name entered from the keyboard
@@ -23,10 +33,19 @@ def main():
     
     #Q1    
     print(number_of_lines(text))
+    print()
 
     #Q2
     text = open(file_name, 'r')
+    print("Words that are less than 4 characters are:", end = " ")
     print_words_less_than(text, 4)
+    print()
+
+    #Q3
+    text = open(file_name, 'r')
+    print("The occurence of all words are:")
+    count_occurence(text)
+    print()
 
 if __name__ == '__main__':
     main()
