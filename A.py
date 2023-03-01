@@ -3,6 +3,7 @@
 #   Done 3/1/2023
 #   By Nguyen Dang Khoa -  DE180891
 #
+import os
 
 def number_of_lines(text: tuple) -> str:
     count_line = 0
@@ -36,6 +37,7 @@ def read_then_change(text: str) -> str:
     return res
 
 def main():
+    os.system('cls')
     #Read the file using the file name entered from the keyboard
     file_name = input("Please enter the file name:").strip()
     while True:
