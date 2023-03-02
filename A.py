@@ -14,7 +14,7 @@ def number_of_lines(text: tuple) -> str:
 
 def print_words_less_than(text: tuple, characters: int):
     for word in text.read().split():
-        if len(word) >= characters:
+        if len(word) <= characters:
             print(word, end = ", ")
 
     print()
