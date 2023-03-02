@@ -1,8 +1,8 @@
 import os
 
 def play_the_game():
-    
-=======
+    pass
+
 def main():
     print("Hello World")
     pass
