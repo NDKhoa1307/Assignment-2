@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 
 def play_the_game():
@@ -6,7 +5,6 @@ def play_the_game():
 =======
 def main():
     print("Hello World")
->>>>>>> origin/main
     pass
 
 #Main function
