@@ -1,6 +1,7 @@
 import os
 
 def play_the_game():
+    print("Hello World")
     pass
 
 def main():
