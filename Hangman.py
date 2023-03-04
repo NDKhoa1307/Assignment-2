@@ -1,11 +1,28 @@
 import os
+import random as rd
 
-def play_the_game():
-    print("Hello World")
+def print_user_UI(user_guesses, incorrect_guesses):
+    print(f"You currently have {incorrect_guesses} incorrect guesses")
+    print("Here is your puzzle:")
+    for x in user_guesses:
+        print(x, end = "")
+    user_guess = input("Please enter your guess").strip()
     pass
 
-def main():
-    print("Hello World")
+def play_the_game():
+    enter_file = input("Please enter the input file that contains all the words:").strip()
+    while True:
+        try:
+            words = open(enter_file, 'r')
+            break
+        except FileNotFoundError:
+            enter_file = input("I'm sorry, but your input file does not exsist or it's format is not sufficient, please re-enter:").strip()
+            continue
+
+    words = words.strip()
+    word = words[rd.randint(0, len(words) - 1)]
+
+    user_guesses = ['_'] * len(word)
     pass
 
 #Main function
@@ -28,3 +45,4 @@ def main():
 #Main program
 if __name__ == '__main__':
     main()
+    pass
