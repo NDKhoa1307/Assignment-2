@@ -25,7 +25,7 @@ def play_the_game():
 
     user_guesses = ['_'] * len(word)
     pass
-
+#Nam ngu
 #Main function
 def main():
     os.system('cls')
