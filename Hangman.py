@@ -43,9 +43,6 @@ def main():
     print("Thank you for stopping by, have a good day!")
     pass
 
-def hello():
-    print("Hello World")
-    
 #Main program
 if __name__ == '__main__':
     main()
