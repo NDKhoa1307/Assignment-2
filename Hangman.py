@@ -114,6 +114,5 @@ def main():
     else:
         print("I'm sorry, but your input is not valid. Please enter either 'yes' for yes and 'no' for no.")
 
-
 if __name__ == '__main__':
     main()
